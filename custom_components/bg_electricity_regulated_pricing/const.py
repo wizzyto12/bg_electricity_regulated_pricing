@@ -60,7 +60,7 @@ PROVIDER_PRICES_BEFORE_JANUARY_2025 = {
     }
 }
 
-PROVIDER_PRICES = {
+PROVIDER_PRICES_FIRST_HALF_2025 = {
     # Section II.1, II.3, II.7, https://www.dker.bg/uploads/reshenia/2025/res_c-03_25.pdf
     "electrohold": {
         "day": .17564,
@@ -81,6 +81,25 @@ PROVIDER_PRICES = {
     }
 }
 
+PROVIDER_PRICES_FROM_JULY_2025 = {
+    # Решение № Ц-25/2025, https://www.dker.bg/uploads/reshenia/2025/res-c-25-2025.pdf
+    "electrohold": {
+        "day": .17514,
+        "night": .07546,
+        "fees": .00085 + .01462 + .00770 + .04349
+    },
+    "evn": {
+        "day": .17227,
+        "night": .07360,
+        "fees": .00085 + .01462 + .00819 + .04267
+    },
+    "energo_pro": {
+        "day": .17661,
+        "night": .07138,
+        "fees": .00085 + .01462 + .00977 + .04349
+    }
+}
+
 PROVIDER_PRICES_BY_DATE = [
     {
         "until": 1719777600,  # midnight 2024-07-01 UTC+2
@@ -91,6 +110,10 @@ PROVIDER_PRICES_BY_DATE = [
         "prices": PROVIDER_PRICES_BEFORE_JANUARY_2025
     },
     {
-        "prices": PROVIDER_PRICES
+        "until": 1751320800,  # midnight 2025-07-01 UTC+2
+        "prices": PROVIDER_PRICES_FIRST_HALF_2025
+    },
+    {
+        "prices": PROVIDER_PRICES_FROM_JULY_2025
     }
 ]
